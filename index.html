@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 760px;
+  margin: auto;
+}
+a {text-decoration : none; color : #003399;}
+a:hover {text-decoration:underline; color: #8C1515; }
+</style>
+
+<style>
+.disabled{
+    pointer-events: none;
+    color:black;
+}
+</style>
+
+<script>
+function copy(dest, source) {
+  if(dest.source == source) {
+    dest.innerHTML = "";
+    dest.source = null;
+  }
+  else {
+    dest.innerHTML = source.innerHTML;
+    dest.source = source;
+  }
+  dest.blur();
+}
+</script>
+
+<head>
+    <title>Wenxuan Zhang</title>
+    <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Wenxuan Zhang">
+    <meta name="keywords" content="Wenxuan Zhang, Wenxuan Zhang CUHK, Isaac, NLP, CUHK, Wenxuan Zhang Isaac">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Homepage of Wenxuan Zhang">
+</head>
+
+<body>
+
+<table cellpadding="15" style="font-size: 17px">
+<tr>
+<td><a href="assets/wxzhang.jpeg"><img src='assets/wxzhang.jpeg' alt="Wenxuan Zhang"/, height = 250></a></td>
+<td>
+<h1> Wenxuan Zhang (Isaac) </h1>
+<a href="http://www1.se.cuhk.edu.hk/~textmine/">Text Mining Group</a>, The Chinese University of Hong Kong <br>  
+<b>Email</b>: <tt>&#105;&#115;&#97;&#107;&#122;&#104;&#97;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#046;&#099;&#111;&#109;</tt> <br>
+<!--  <b>Office</b>: Room 711, William M.W. Mong Engineering Building, CUHK, Hong Kong</font> <br> -->
+<br>
+<a href = "#interest">[Research Interests]</a> 
+<a href = "#education">[Education]</a> 
+<a href = "#publications">[Publications]</a><br>
+<a href="#awards">[Awards]</a> <a href = "#teaching">[Teaching]</a> <a href="#misc">[Misc.]</a> 
+<a href="./blog">[Blog]</a><br>
+</td>
+<!-- <td><img src='images/seal.png', height = 100></td> -->
+</tr>
+</table>
+
+<p style="width: 760px;">
+  Hi, I am currently a second-year Ph.D. student at the <a href="http://www1.se.cuhk.edu.hk/~textmine/">CUHK Text Mining Group</a> in The Chinese University of Hong Kong, 
+  where I am advised by <a href="http://www.se.cuhk.edu.hk/people/wlam.html">Prof. LAM Wai</a>. 
+  Before that, I obtained my B.Eng. degree in the College of Electronics and Information Engineering from Sichuan University in June 2018. 
+  <!-- I have a broad interest in several Natural Language Processing and Information Retrieval areas, 
+  especially on automated Question Answering (QA). -->
+  
+  <br><br>
+  I have a <a href="./blog">blog</a>, which is mainly about NLP. <br> 
+  You can also find me on Zhihu<a href="https://www.zhihu.com/people/jun-moer">(@Isaac)</a>, <a href="https://www.weibo.com/u/5719142999?is_hot=1">Weibo</a> and (unsurprisingly) <a href="https://twitter.com/IsakZhang">Twitter</a>.
+
+</p>
+
+<a name = "interest" class="disabled"><h2> Research Interests </h2></a>
+<ul>
+<li> Deep learning for natural language processing </li>
+<li> Question answering, especially in the E-commerce scenario</li>
+</ul>
+
+<a name = "education" class="disabled"><h2> Education </h2></a>
+<ul>
+<li> 2018 ~ Present: PhD student, Department of Systems Engineering and Engineering Management, The Chinese University of Hong Kong </li>
+<li> 2014 ~ 2018: Information Security, College of Electronics and Information Engineering, Sichuan University </li>
+</ul>
+
+<a name = "publications" class="disabled"><h2> Selected Publications
+<font size="4.5">[<a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a>]</font></h2></a>
+<!-- (<sup>*</sup>: equal contribution) -->
+<ul>
+  <li> <b>Review-guided Helpful Answer Identification in E-commerce</b>
+    <br><b>Wenxuan Zhang</b>, Wai Lam, Yang Deng, Jing Ma.
+    <br><i>To appear in the Proceedings of the World Wide Web Conference</i>, 2020. (<b>WWW 2020, oral</b>) </li>
+  
+    <div id="bib1" style="display:none">
+  <blockquote>
+  <pre>
+    
+  </pre>
+  </blockquote>
+  </div>
+  [<a href="">arxiv</a>]
+  [<a href="">paper</a>]
+  [<a href="">code</a>]
+  [<a href="javascript:copy(div1, bib1)">bibtex</a>]<br>
+  <div id="div1"></div><br>
+
+
+  <li> <b>Exploiting BERT for End-to-End Aspect-Based Sentiment Analysis</b>
+    <br>Xin Li, Lidong Bing, <b>Wenxuan Zhang</b> and Wai Lam.
+    <br><i>In Proceedings of the 5th Workshop on Noisy User-generated Text</i>, 2019. <b>(W-NUT@EMNLP 2019)</b></li>
+  
+  <div id="bib0" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{li-etal-2019-exploiting,
+      title = {Exploiting {BERT} for End-to-End Aspect-based Sentiment Analysis"},
+      author = {Li, Xin and Bing, Lidong and Zhang, Wenxuan and Lam, Wai},
+      booktitle = {Proceedings of the 5th Workshop on Noisy User-generated Text (W-NUT 2019)},
+      year = {2019},
+      url = {https://www.aclweb.org/anthology/D19-5505},
+      pages = {34--41} 
+    }
+  </pre>
+  </blockquote>
+  </div>
+  [<a href="https://arxiv.org/pdf/1910.00883.pdf">arxiv</a>]
+  [<a href="https://www.aclweb.org/anthology/D19-5505.pdf">paper</a>]
+  [<a href="https://github.com/lixin4ever/BERT-E2E-ABSA">code</a>]
+  [<a href="javascript:copy(div0, bib0)">bibtex</a>]<br>
+  <div id="div0"></div><br>
+</ul>
+
+
+<a name = "awards" class="disabled"><h2> Honors & Awards</h2></a>
+<ul style="width: 820px;">
+  <li> National Scholarship in 2016-2017, Ministry of Education of China, 2017 </li>
+  <li> National Scholarship in 2015-2016, Ministry of Education of China, 2016 </li>
+  <li> National Cyber Security Scholarship (<i>Only 100 undergraduates in China are rewarded every year</i>), 2017</li>
+  <li> Third Prize in National College Student Information Security Contest, 2017</li>
+  <li> Outstanding Graduate of Sichuan University, SCU, 2017</li>
+  <li> Outstanding Student of Sichuan University, SCU, 2016 </li>
+  <li> Excellent President of Academic Student Community of Sichuan University, SCU, 2016 </li>
+</ul>
+
+<a name = "teaching" class="disabled"><h2> Teaching </h2></a>
+<ul style="width: 820px;">
+<li> TA for ECLT5810 E-Commerce Data Mining Technique (for Msc, 2018-19 Spring) </li>
+<li> TA for SEEM3460/ESTR3504 Computer Processing System Concepts (for UG, 2018-19 Fall, 2019-2020 Fall) </li>
+</ul>
+
+<a name = "misc" class="disabled"><h2> Miscellaneous </h2></a>
+<ul style="width: 750px;">
+  <li>I love taking pictures especially portrait photography, although it can be hard to find a (human) model. </li>
+  <li>Struggling to learn swimming recently </li>
+  <li>My name in Chinese is <span style="font-family:STFangsong; font-size:12pt">张雯轩</span>, where the last character "xuan" can be difficult to pronounce, so some friends like to call me Isaac. </li>
+  <li>You would be interested to check this <a href="./collections.htm">list</a> which collects everything I cannot classify it, but definitely interesting.</li>
+  <li>Webpage template borrows from <a href="https://www.cs.princeton.edu/~danqic/">Danqi Chen</a> with some modifications</li>
+</ul>
+
+Last updated: 02/2020.<br><br><br>
+</html>
