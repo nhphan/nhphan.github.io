@@ -1,206 +1,202 @@
 <!DOCTYPE html>
-<html>
-
-<style>
-body {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: 760px;
-  margin: auto;
-}
-a {text-decoration : none; color : #003399;}
-a:hover {text-decoration:underline; color: #8C1515; }
-</style>
-
-<style>
-.disabled{
-    pointer-events: none;
-    color:black;
-}
-</style>
-
-<script>
-function copy(dest, source) {
-  if(dest.source == source) {
-    dest.innerHTML = "";
-    dest.source = null;
-  }
-  else {
-    dest.innerHTML = source.innerHTML;
-    dest.source = source;
-  }
-  dest.blur();
-}
-</script>
+<html lang="en">
 
 <head>
-    <title>Wenxuan Zhang | CUHK </title>
-    <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="author" content="Wenxuan Zhang">
-    <meta name="keywords" content="Wenxuan Zhang, Wenxuan Zhang CUHK, Isaac, NLP, CUHK, Wenxuan Zhang Isaac">
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="Homepage of Wenxuan Zhang">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Wenxuan Zhang (Isaac) | The Chinese University of Hong Kong </title>
+  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <meta name="author" content="Wenxuan Zhang">
+  <meta name="keywords" content="Wenxuan Zhang, 张雯轩, Wenxuan Zhang CUHK, Isaac, NLP, CUHK, Wenxuan Zhang Isaac">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Homepage of Wenxuan Zhang Isaac">
+
+  <link rel="stylesheet" href="./styles.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 
+
 <body>
+  <div class="container content"> 
+  <main>
+  <div class="home">
 
-<table cellpadding="15" style="font-size: 17px">
-<tr>
-<td><a href="assets/wxzhang.jpeg"><img src='assets/wxzhang.jpeg' alt="Wenxuan Zhang"/, height = 250></a></td>
-<td>
-<h1> Wenxuan Zhang (Isaac) </h1>
-<a href="http://www1.se.cuhk.edu.hk/~textmine/">Text Mining Group</a>, The Chinese University of Hong Kong <br>  
-<b>Email</b>: <tt>&#105;&#115;&#97;&#107;&#122;&#104;&#97;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#046;&#099;&#111;&#109;</tt> <br>
-<!--  <b>Office</b>: Room 711, William M.W. Mong Engineering Building, CUHK, Hong Kong</font> <br> -->
-<br>
-<a href = "#interest">[Research Interests]</a> 
-<a href = "#education">[Education]</a> 
-<a href = "#publications">[Publications]</a><br>
-<a href="#awards">[Awards]</a> <a href = "#teaching">[Teaching]</a> <a href="#misc">[Misc.]</a> 
-<a href="./blog/index.html">[Blog]</a><br>
-</td>
-<!-- <td><img src='images/seal.png', height = 100></td> -->
-</tr>
-</table>
-
-<p style="width: 760px;">
-  Hi, I am currently a second-year Ph.D. student at the <a href="http://www1.se.cuhk.edu.hk/~textmine/">CUHK Text Mining Group</a> in The Chinese University of Hong Kong, 
-  where I am advised by <a href="http://www.se.cuhk.edu.hk/people/wlam.html">Prof. LAM Wai</a>. 
-  Before that, I obtained my B.Eng. degree in the College of Electronics and Information Engineering from Sichuan University in June 2018. 
-  <!-- I have a broad interest in several Natural Language Processing and Information Retrieval areas, 
-  especially on automated Question Answering (QA). -->
-  
-  <br><br>
-  I have a <a href="./blog/index.html">blog</a>, which is mainly about NLP. <br> 
-  Here is my <a href="https://github.com/isakzhang">github</a>, you can also find me on Zhihu (@<a href="https://www.zhihu.com/people/jun-moer">Isaac</a>)</a> <!-- <a href="https://www.weibo.com/u/5719142999?is_hot=1">Weibo</a> and (unsurprisingly) <a href="https://twitter.com/IsakZhang">Twitter</a> -->.
-
-</p>
-
-<a name = "interest" class="disabled"><h2> Research Interests </h2></a>
-My research interests are in the areas of deep learning for natural language processing (NLP) and information retrieval (IR). 
-In particular, I am interested in the following areas:
-<ul>
-<li> Question Answering and Text matching</li>
-<li> Information Quality Assessment and Information Verification (Fact Checking)</li>
-</ul>
-
-<a name = "education" class="disabled"><h2> Education </h2></a>
-<ul>
-<li> 2018 ~ Present: PhD student, Department of Systems Engineering and Engineering Management, The Chinese University of Hong Kong </li>
-<li> 2014 ~ 2018: Information Security, College of Electronics and Information Engineering, Sichuan University </li>
-</ul>
-
-<a name = "publications" class="disabled"><h2> Selected Publications
-<font size="4.5">[<a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a>]</font></h2></a>
-<!-- (<sup>*</sup>: equal contribution) -->
-<ul>
-  <li> <div id="text" style = "color:#1f57b8"><b>Answer Ranking for Product-Related Questions via Multiple Semantic Relations Modeling</b></div>
-    <b>Wenxuan Zhang</b>, Yang Deng, Wai Lam.
-    <br><i>To appear in The 43rd International ACM SIGIR Conference on Research & Development in Information Retrieval</i>, 2020. (<b>SIGIR 2020</b>) </li>
-    <!--
-    <div id="bib1" style="display:none">
+  <div class="mini-intro">
+  <img class="avatar" src="img/wxzhang-photo-rec.jpeg" alt="wxzhang-photo">
     
-  <blockquote>
-  <pre>
-    
-  </pre>
-  </blockquote>
-  </div>
-  [<a href="https://arxiv.org/abs/2003.06209">arxiv</a>]
-  [<a href="">paper</a>]
-  [<a href="javascript:copy(div1, bib1)">bibtex</a>]<br>
+  <h1 id="wxzhang">Wenxuan Zhang (Isaac)</h1>
+  <p><small><code class="language-plaintext highlighter-rouge">wxzhang [at] se.cuhk.edu.hk</code></small></p>
+
+  <p>Hi, I am currently a third-year Ph.D. student at the Text Mining Group in <a href="https://www.cuhk.edu.hk/">The Chinese University of Hong Kong</a>, 
+  where I am advised by <a href="http://www1.se.cuhk.edu.hk/~textmine/">Prof. Wai LAM</a> to conduct research on natural language processing (NLP).
+  <!-- Before that, I obtained my B.Eng. degree in the College of Electronics and Information Engineering from Sichuan University in June 2018.</p> -->
+
+  <p>I have a broad interest in NLP and machine learning problems, especially utilizing deep learning for various interesting real-world NLP tasks.
+  Currently, my major research interest focuses on <span style="color:#B08519">low-resource NLP</span>.</p>
+
+  <p>More about me: <a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a> / <a href="https://www.zhihu.com/people/jun-moer">Zhihu</a> / <a href="./blog/index.html">Blog</a></p>
+
+  <hr />
+
+  <h3 id="research-interests">Research Interests</h4>
+    <ul>
+      <li>Low-resource NLP (cross-lingual and cross-domain settings)</li>
+      <li>Question Answering (especially product-related QA in E-commerce)</li>
+      <li>Information Verification: Fact Checking etc.</li>
+      <li>Sentiment Analysis and Text Summarization</li>
+    </ul>
+
+  <!--
+  <h3 id="news">News</h3>
+    <ul>
+      <li><small> <span style="color:#B08519">[Oct 2020]</span> x </small></li>
+    </ul>
   -->
-  <div id="div1"></div><br>
-  
 
-  <li> <div id="text" style = "color:#1f57b8"><b>Bridging Hierarchical and Sequential Context Modeling for Question-driven Extractive Answer Summarization</b></div>
-    Yang Deng, <b>Wenxuan Zhang</b>, Yaliang Li, Min Yang, Wai Lam and Ying Shen.
-    <br><i>To appear in The 43rd International ACM SIGIR Conference on Research & Development in Information Retrieval</i>, 2020. (<b>SIGIR 2020</b>) </li>
-    <!--
-    <div id="bib1" style="display:none">
-  <blockquote>
-  <pre>
-    
-  </pre>
-  </blockquote>
-  </div>
-  [<a href="">paper</a>]
-  [<a href="javascript:copy(div1, bib1)">bibtex</a>]<br>
-  -->
-  <div id="div1"></div><br>
-  
+  <h3 id="publications">Selected Publications <font size="4.5">[<a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a>]</font></h3> 
+    <ul>
+      <li>
+        <div id="text" style = "color:#1f57b8">Answering Product-related Questions with Heterogeneous Information</div>
+        <strong>Wenxuan Zhang</strong>, Qian Yu, Wai Lam.
+        <br>To appear in <i>The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing</i>, 2020. (<b>AACL-IJCNLP 2020</b>)  </li>
+      <p> </p>
+
+      <li>
+        <div id="text" style = "color:#1f57b8">AnswerFact: Fact Checking in Product Question Answering</div>
+        <strong>Wenxuan Zhang</strong>, Yang Deng, Jing Ma, Wai Lam.
+        <br>To appear in <i>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing</i>, 2020. (<b>EMNLP 2020</b>) 
+        [<a href="">paper</a>] [<a href="">data</a>] </li>
+      <p> </p>
+
+      <li> 
+        <div id="text" style = "color:#1f57b8">Multi-hop Inference for Question-driven Summarization</div>
+        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam.
+        <br>To appear in <i>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing</i>, 2020. (<b>EMNLP 2020</b>) 
+        </li>
+      <p> </p>
+
+      <li> 
+        <div id="text" style = "color:#1f57b8">Opinion-aware Answer Generation for Review-driven Question Answering in E-Commerce</div>
+        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam.
+        <br>To appear in <i>The 29th ACM International Conference on Information and Knowledge Management</i>, 2020. (<b>CIKM 2020</b>) 
+        </li>
+      <p> </p>
+
+      <li>
+        <div id="text" style = "color:#1f57b8">Answer Ranking for Product-Related Questions via Multiple Semantic Relations Modeling</div>
+        <strong>Wenxuan Zhang</strong>, Yang Deng, Wai Lam.
+        <br><i>In the 43rd International ACM SIGIR Conference on Research & Development in Information Retrieval</i>, 2020. (<b>SIGIR 2020</b>) 
+        [<a href="https://arxiv.org/abs/2006.15599">arXiv</a>] </li>
+      <p> </p>
+
+      <li> 
+        <div id="text" style = "color:#1f57b8">Bridging Hierarchical and Sequential Context Modeling for Question-driven Extractive Answer Summarization</div>
+        Yang Deng, <strong>Wenxuan Zhang</strong>, Yaliang Li, Min Yang, Wai Lam and Ying Shen.
+        <br><i>In the 43rd International ACM SIGIR Conference on Research & Development in Information Retrieval</i>, 2020. (<b>SIGIR 2020</b>) 
+        [<a href="https://dl.acm.org/doi/abs/10.1145/3397271.3401208">arXiv</a>] [<a href="https://github.com/dengyang17/hscm">code</a>]</li>
+      <p> </p>
+
+      <li> 
+        <div id="text" style = "color:#1f57b8">Review-guided Helpful Answer Identification in E-commerce</div>
+        <strong>Wenxuan Zhang</strong>, Wai Lam, Yang Deng, Jing Ma.
+        <br><i>In Proceedings of the World Wide Web Conference</i>, 2020. (<b>WWW 2020</b>) 
+        [<a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380015">paper</a>]
+        [<a href="https://github.com/isakzhang/answer-helpfulness-prediction">code</a>]</li>
+      <p> </p>
+      <!-- [<a href="https://arxiv.org/abs/2003.06209">arxiv</a>] 
+      [<a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380015">paper</a>]
+      [<a href="https://github.com/isakzhang/answer-helpfulness-prediction">code</a>]
+      [<a href="https://docs.google.com/presentation/d/1aJ5IGjtOHMAtTxbq1Q5M5v_Uy9wusyecur85QMr7cns/edit?usp=sharing">slides</a>] -->
+
+      <li> 
+        <div id="text" style = "color:#1f57b8">Exploiting BERT for End-to-End Aspect-Based Sentiment Analysis</div>
+        Xin Li, Lidong Bing, <b>Wenxuan Zhang</b> and Wai Lam.
+        <br><i>In Proceedings of the 5th Workshop on Noisy User-generated Text</i>, 2019. <b>(W-NUT@EMNLP 2019)</b>
+        [<a href="https://www.aclweb.org/anthology/D19-5505.pdf">paper</a>]
+        [<a href="https://github.com/lixin4ever/BERT-E2E-ABSA">code</a>]</li>
+      <!-- [<a href="https://arxiv.org/pdf/1910.00883.pdf">arxiv</a>] -->
+    </ul>
 
 
-  <li> <div id="text" style = "color:#1f57b8"><b>Review-guided Helpful Answer Identification in E-commerce</b></div>
-    <b>Wenxuan Zhang</b>, Wai Lam, Yang Deng, Jing Ma.
-    <br><i>To appear in the Proceedings of the World Wide Web Conference</i>, 2020. (<b>WWW 2020, oral</b>) </li>
-  
-    <div id="bib1" style="display:none">
-  <blockquote>
-  <pre>
-    
-  </pre>
-  </blockquote>
-  </div>
-  [<a href="https://arxiv.org/abs/2003.06209">paper</a>]
-  <!-- [<a href="">paper</a>] -->
-  [<a href="https://github.com/isakzhang/answer-helpfulness-prediction">code</a>]
-  [<a href="https://docs.google.com/presentation/d/1aJ5IGjtOHMAtTxbq1Q5M5v_Uy9wusyecur85QMr7cns/edit?usp=sharing">slides</a>]
-  [<a href="javascript:copy(div1, bib1)">bibtex</a>]<br>
-  <div id="div1"></div><br>
+<h3 id="awards">Honors & Awards</h3>
+  <ul>
+    <li> ACM SIGIR Student Travel Grant for SIGIR 2020 </li>
+    <li> National Scholarship in 2016-2017, Ministry of Education of China, 2017 </li>
+    <li> National Scholarship in 2015-2016, Ministry of Education of China, 2016 </li>
+    <li> National Cyber Security Scholarship (<i>Only <span style="color:#B08519">100</span> undergraduates in China are rewarded every year</i>), 2017</li>
+    <li> Third Prize in National College Student Information Security Contest, 2017</li>
+    <li> Outstanding Graduate of Sichuan University, SCU, 2017</li>
+    <li> Outstanding Student of Sichuan University, SCU, 2016 </li>
+    <li> Excellent President of Academic Student Community of Sichuan University, SCU, 2016 </li>  
+  </ul>
 
+<h3 id="professional">Professional Activities</h3>
+  <ul>
+    <li> Reviewer (or PC Member): AAAI 2021 </li>
+    <li> Secondary Reviewer: ACL 2020, WSDM 2020, CIKM 2019-2020, ICDM 2020, COLING 2020, AACL 2020, EMNLP 2019, WWW 2019.</li>
+  </ul>
+</div>
 
-  <li> <div id="text" style = "color:#1f57b8"><b>Exploiting BERT for End-to-End Aspect-Based Sentiment Analysis</b></div>
-    Xin Li, Lidong Bing, <b>Wenxuan Zhang</b> and Wai Lam.
-    <br><i>In Proceedings of the 5th Workshop on Noisy User-generated Text</i>, 2019. <b>(W-NUT@EMNLP 2019)</b></li>
-  
-  <div id="bib0" style="display:none">
-  <blockquote>
-  <pre>
-    @inproceedings{li-etal-2019-exploiting,
-      title = {Exploiting {BERT} for End-to-End Aspect-based Sentiment Analysis"},
-      author = {Li, Xin and Bing, Lidong and Zhang, Wenxuan and Lam, Wai},
-      booktitle = {Proceedings of the 5th Workshop on Noisy User-generated Text (W-NUT 2019)},
-      year = {2019},
-      url = {https://www.aclweb.org/anthology/D19-5505},
-      pages = {34--41} 
-    }
-  </pre>
-  </blockquote>
-  </div>
-  <!-- [<a href="https://arxiv.org/pdf/1910.00883.pdf">arxiv</a>] -->
-  [<a href="https://www.aclweb.org/anthology/D19-5505.pdf">paper</a>]
-  [<a href="https://github.com/lixin4ever/BERT-E2E-ABSA">code</a>]
-  [<a href="javascript:copy(div0, bib0)">bibtex</a>]<br>
-  <div id="div0"></div><br>
-</ul>
+<!--
+<ul class="accordion-tabs">
+  <li class="tab-header-and-content">
+      <div class="tab-aside-content"> </div>
+  </li>
 
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Teaching</a>
+    <div class="tab-content featured-projects force-show is-open"> 
+      <p> </p>
+      <h4> In <em>CUHK</em>:</h4>
+      <ul>
+        <li> TA for ECLT5810 E-Commerce Data Mining Technique (for Msc, 2018-19 Spring) </li>
+        <li> TA for SEEM3460/ESTR3504 Computer Processing System Concepts (for UG, 2018-19 Fall, 2019-2020 Fall, 2020-2021 Fall) </li>
+      </ul> 
+    </div>
+  </li>
 
-<a name = "awards" class="disabled"><h2> Honors & Awards</h2></a>
-<ul style="width: 820px;">
-  <li> National Scholarship in 2016-2017, Ministry of Education of China, 2017 </li>
-  <li> National Scholarship in 2015-2016, Ministry of Education of China, 2016 </li>
-  <li> National Cyber Security Scholarship (<i>Only 100 undergraduates in China are rewarded every year</i>), 2017</li>
-  <li> Third Prize in National College Student Information Security Contest, 2017</li>
-  <li> Outstanding Graduate of Sichuan University, SCU, 2017</li>
-  <li> Outstanding Student of Sichuan University, SCU, 2016 </li>
-  <li> Excellent President of Academic Student Community of Sichuan University, SCU, 2016 </li>
-</ul>
+  <li class="tab-header-and-content">
+      <a href="#" class="tab-link">Blog</a>
+      <div class="tab-content featured-posts">
+        <p></p>
+        <p>Here are some of my favourite blog posts:</p>
+          
+        <article class="post">
+          <h4 class="post-title">
+            <a href=""> Word Vector - Distributional VS. Distributed Representation </a>
+          </h4>
+        </article>
 
-<a name = "teaching" class="disabled"><h2> Teaching </h2></a>
-<ul style="width: 820px;">
-<li> TA for ECLT5810 E-Commerce Data Mining Technique (for Msc, 2018-19 Spring) </li>
-<li> TA for SEEM3460/ESTR3504 Computer Processing System Concepts (for UG, 2018-19 Fall, 2019-2020 Fall) </li>
-</ul>
+        <a href="archives.html" class="see-archives">See all articles</a>
+      </div>
+  </li>
 
-<a name = "misc" class="disabled"><h2> Miscellaneous </h2></a>
-<ul style="width: 750px;">
-  <li>I love taking pictures especially portrait photography, although it can be hard to find a (human) model. </li>
-  <li>My name in Chinese is <span style="font-family:STFangsong; font-size:12pt">张雯轩</span>, where the last character "xuan" can be difficult to pronounce (for those speaking Germanic languages), so some friends prefer to call me Isaac. </li>
-  <li>You might be interested to check this <a href="./collections.htm">list</a> which collects everything I cannot classify it, but definitely interesting.</li>
-  <li>Webpage design borrows from <a href="https://www.cs.princeton.edu/~danqic/">Danqi Chen</a> with some modifications</li>
-</ul>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Miscellaneous</a>
+    <div class="tab-content">
+        
+        <h2 id="tidbits">Tidbits</h2>
 
-Last updated: 04/2020.<br><br><br>
+    </div>
+  </li>
+
+  </ul>
+
+</div>
+</main>
+</div>
+
+<script src="https://nlp.stanford.edu\/~johnhew//js/jquery.min.js"></script>
+<script src="https://nlp.stanford.edu\/~johnhew//js/site-form-triggers.js"></script>
+<script src="https://nlp.stanford.edu\/~johnhew//js/home-accordion-tabs.js"></script>
+-->
+
+<div id='footer'>
+  <p style="text-align:right;">Last modified date: October, 2020
+  </br><a href="https://nlp.stanford.edu/~johnhew/">Website template credits</a></p>
+</div>
+
+</body>
+
 </html>
