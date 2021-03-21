@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Isaac&#39;s NLP Blog</title>
+  
+  
+  <link href="http://yoursite.com/blog/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/blog/"/>
+  <updated>2021-03-21T10:47:30.136Z</updated>
+  <id>http://yoursite.com/blog/</id>
+  
+  <author>
+    <name>Isaac</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word Vector - Distributional v.s. Distributed Representation</title>
+    <link href="http://yoursite.com/blog/wordvec-distributional-vs-distributed/"/>
+    <id>http://yoursite.com/blog/wordvec-distributional-vs-distributed/</id>
+    <published>2020-06-24T16:00:00.000Z</published>
+    <updated>2021-03-21T10:47:30.136Z</updated>
+    
+    <content type="html"><![CDATA[<p>提到词向量的时候，一般不可避免的会接触到 “Distributional Representation”，“Distributed Representation” 和 “Distributional Hypothesis” 这几个术语。由于它们长得非常像，许多地方也把前两者都翻译成“分布式表示”，所以就更加容易弄混了（至少我刚接触到的时候以为它们是一个东西 🤦‍♂️）。这两天偶然看到了 Goldberg 那本书中对这几个术语的区分，觉得非常清晰，所以这里结合自己的理解谈一下这几个术语到底代表什么。</p><p>P.S. 因为他们中文都带有“分布式”的意思，所以为了避免引起误解，全文这些词语就都用英文表示了。</p><h2 id="Background-Word-Representation"><a href="#Background-Word-Representation" class="headerlink" title="Background: Word Representation"></a>Background: Word Representation</h2><p>计算机显然无法直接处理原始的文本信息，所以在 NLP 中，如何把一个文本（词语/句子/段落/……）转化为一个计算机可以处理的数值型数据（通常是一个向量）是一个非常重要的问题，一般被笼统的称为文本表示。而将较长的文本（例如一段话或者一整篇文章）转化为一个向量显示比较困难，许多研究都集中在最小的粒度，也就是如何将一个词语 word 转化为一个向量，得到的向量通常被称为 Word Vector/Embedding/Representation。</p><p>至于如何（从大规模文本语料中）得到这样的 word vector，这就引出了“Distributional Representation” 和 “Distributed Representation” 这两种思路。值得注意的是它们并不是具体的算法（例如 word2vec, glove 或者最近一两年的 contextualized word vector 例如 BERT 等），所以本文中不会详细介绍如何得到 word vector 的方法。</p><h2 id="Distributional-Representation"><a href="#Distributional-Representation" class="headerlink" title="Distributional Representation"></a>Distributional Representation</h2><p>Distributional Semantics 的假说认为一个词语的词义可以从它在语料库中的分布得到体现，也就是说通过观察一个词出现的上下文(context)，我们可以了解到这个词的语义。这应该也是每个 NLPer 都听说过的那句话：</p><blockquote><p>You shall know a word by the company it keeps (Firth, 1957)</p></blockquote><p>由这种思路出发，为了找到词语的 distributional properties，人们一般建立一个 词语-上下文矩阵 (Word-Context Matrix) M。这个矩阵 M 的每一行对应一个词语，每一列对应着一种上下文关系，比较常见的例子是每一行代表一个词语，每一列代表在这个词语的周围一个小的 context window 中，另一个词语的共现频率；又或者通过计算 PMI/PPMI 来得到这样的矩阵。无论怎么来定义这样的矩阵，当得到 M 以后，我们其实就可以认为这个矩阵的每一行就是对应词语的一个 word vector，因为很容易想到，出现在相似语境下的两个词语的对应向量是会很相似的。</p><p>然而这个矩阵一般列数会非常大，导致得到的词向量维度非常高，为了得到低维/稠密向量，可以对其进行 SVD 分解然后降维，就可以得到一个低维的词向量，不过这个已经不是本篇讨论的重点了。</p><p>与 “distributional representations” 相对的是 “non-distributional representations”，例如不通过分析词语出现的上下文语境，而是通过构建 lexical resource 例如 WordNet 这种分析一个词的语义信息。</p><h2 id="Distributed-Representations"><a href="#Distributed-Representations" class="headerlink" title="Distributed Representations"></a>Distributed Representations</h2><p>在 distributed representation 中，强调的重点是每个词并非采用离散的表征方式（例如 one-hot encoding），而是被表征为一个低维，稠密的向量。具体来讲，在 one-hot encoding 中，每个词都是表示成一个 |V| 维的向量，只有自己对应的维度值为1，其他全部为0。例如：</p><p>$$w^{aardvark}=\begin{bmatrix} 1\0\0\ \vdots\0 \end{bmatrix}, w^{a}=\begin{bmatrix} 0\1\0\ \vdots\0 \end{bmatrix}, w^{at}=\begin{bmatrix} 0\0\1\ \vdots\0 \end{bmatrix}…, w^{zebra}=\begin{bmatrix} 0\0\0\ \vdots\1 \end{bmatrix}$$</p><p>而 distributed representation 强调的是每个词都对应着一个低维（例如100维）的向量，这个词的“词义”或者这个词与其他词的关系就蕴含在这个向量的不同维度中，例如题图中例子，但是我们一般并不知道每个维度对应着什么含义。</p><p>以较为早期的 <a href="http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">Neural Language Model</a> 为例，每个词对应着最初 Embedding 矩阵的一行或者 最后 softmax 之前参数矩阵的一列，当随机初始化这些参数以后，training 的过程会自动决定什么样的 embedding 才是好的（才可以使得目标词汇的概率值最大）。</p><h2 id="Connections"><a href="#Connections" class="headerlink" title="Connections"></a>Connections</h2><p>从我的观点来看这两种 “representation” 并不是对立关系，只是侧重的角度不一样，前一种是说词的意义可以从语境中得出，后一种则是强调每个词可以由一个低维稠密的向量表示（而不是离散表示）。</p><p>如果从可解释角度出发，Distributed Representations 得到的向量中各个维度有没有什么明确的对应语义解释，而 distributional representations 中从 word-context matrix 得到的词向量的每一项是有明确的语义关系的（例如第3维表示 dog 和这个词语的共现频率）。然而如果用 SVD 分解后，得到的低维向量也同样没有十分明确的意义了。</p><p>其实无论哪种思路，具体到目前较为流行的各个算法上（例如无论是分解词语共现矩阵或者通过预测下一个词来自动“学习”），都是基于 distributional hypothesis，也即试图通过上下文之间的相似性来表述词语之间的相似性。在 Neural word embedding as implicit matrix factorization 这篇文章中，也证明了 skip-gram 和基于 PMI 矩阵的矩阵分解之间的等价性，所以也可以说是殊(?)途同归吧。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="http://phontron.com/class/nn4nlp2019/assets/slides/nn4nlp-03-wordemb.pdf">Word Embedding Slide of CMU CS11-747</a></li><li><a href="https://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037">Neural Network Methods for NLP</a>, Goldberg, Chapter 10</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;提到词向量的时候，一般不可避免的会接触到 “Distributional Representation”，“Distributed Representation” 和 “Distributional Hypothesis” 这几个术语。由于它们长得非常像，许多地方也把前两者</summary>
+      
+    
+    
+    
+    
+    <category term="nlp" scheme="http://yoursite.com/blog/tags/nlp/"/>
+    
+    <category term="word-vec" scheme="http://yoursite.com/blog/tags/word-vec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS基础课——课程/资料 推荐</title>
+    <link href="http://yoursite.com/blog/cs-tutorials/"/>
+    <id>http://yoursite.com/blog/cs-tutorials/</id>
+    <published>2020-06-13T16:00:00.000Z</published>
+    <updated>2021-03-21T10:47:23.578Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近一个月为了准备QE，又回过头把本科的几门课过了一遍。之前在网上好像也没有看到比较集中的课程和相关资源的推荐，所以趁着现在还没有忘记，把这段时间碰到觉得比较好的资源记录下来。</p><h2 id="Teach-Yourself-Computer-Science"><a href="#Teach-Yourself-Computer-Science" class="headerlink" title="Teach Yourself Computer Science"></a>Teach Yourself Computer Science</h2><p><a href="https://link.zhihu.com/?target=https://teachyourselfcs.com/%23databases">Teach Yourself Computer Science</a> 这个网站已经有很多人推荐了（以下都简写成 TYCS），里面总共介绍了 programming, computer architecture, algorithms 等等九个方向作者认为最好的公开课和书籍资料，如果对于某个领域实在不知道选什么，这个还是很有参考价值的。</p><p><img src="https://raw.githubusercontent.com/wxzhang-isaac/img-bed/imgs/cs-courses.jpg" alt="cs-courses"></p><hr><h2 id="操作系统-Operating-Systems"><a href="#操作系统-Operating-Systems" class="headerlink" title="操作系统 Operating Systems"></a>操作系统 Operating Systems</h2><p>我自己考试的推荐书籍是 William Stallings 的<a href="https://link.zhihu.com/?target=http://williamstallings.com/OperatingSystems/">操作系统教科书</a>，写的非常详细，特别是里面很多示意图我觉得画的很好。但是这本书用来准备考试看几个重点章节可能还行，如果纯自学比较容易看睡着，细节实在太多了。</p><p>就可读性而言，<a href="https://link.zhihu.com/?target=http://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a> 这本书虽然我只看了部分章节，但是可以他的写作思路非常清晰，很值得推荐，并且这是本免费在线书，都不用费心到处去找PDF。此外作者 Prof. <a href="https://link.zhihu.com/?target=http://www.cs.wisc.edu/~remzi">Remzi Arpaci-Dusseau</a> 在 University of Wisconsin 也开了相应的课程 <a href="https://link.zhihu.com/?target=http://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/">CS-537 Introduction to Operating Systems</a> ，很适合自学。</p><hr><h2 id="数据库-Database"><a href="#数据库-Database" class="headerlink" title="数据库 Database"></a>数据库 Database</h2><p>比较经典的教科书就是 <a href="https://link.zhihu.com/?target=https://www.db-book.com/db7/">Database System Concepts</a>，今年3月份已经是到第7版了。官网上也提供了 <a href="https://link.zhihu.com/?target=https://www.db-book.com/db7/slides-dir/index.html">Slides</a> 和 <a href="https://link.zhihu.com/?target=https://www.db-book.com/db7/practice-exer-dir/index.html">Solutions to Practice Exercises</a> ，比较适合自学。最新版本的书可能比较难找到资源，应对考试的话看第四版基本也足够了。</p><p>数据库我觉得是单纯看书比较难 follow 的，所以我之前看的是 TYCS 推荐的 Joe Hellerstein 在伯克利开的数据库课程 <a href="https://link.zhihu.com/?target=https://archive.org/details/UCBerkeley_Course_Computer_Science_186">Spring 2015 recording of CS 186</a>。但是看了几集后发现不是非常习惯他的授课风格，后来就发现了 CMU <a href="https://link.zhihu.com/?target=http://www.cs.cmu.edu/~pavlo">Andy Pavlo</a> 的 <a href="https://link.zhihu.com/?target=https://15445.courses.cs.cmu.edu/fall2018/">CMU 15-445/645</a>。官网上提供了每节课的视频，slides，甚至还有 notes，算是一条龙服务了，而且我还蛮喜欢这个老师的讲课风格。</p><hr><h2 id="数据结构与算法-Algorithms"><a href="#数据结构与算法-Algorithms" class="headerlink" title="数据结构与算法 Algorithms"></a>数据结构与算法 Algorithms</h2><p>数据结构和算法就没什么好提的了，网上资源已经非常多了，基本上想要怎么学都能找到相应的资料。这里只提两个我还没看到过有人推荐的：</p><ul><li><a href="https://link.zhihu.com/?target=https://medium.com/basecs">basecs</a> 是一个专门介绍数据结构和算法的 blog，作者在 2017 年一整年保持着大约一周一篇的频率（太强了！）逐步介绍了各种常用的数据结构和算法。如果是对这些不太熟悉，这些博客非常易读，但是如果已经比较熟悉的，可能会觉得有点简单。</li><li>如果是刷算法题的话，网上资源太五花八门了，我觉得比较清晰的是 <a href="https://link.zhihu.com/?target=https://github.com/soulmachine/leetcode/raw/master/C++/leetcode-cpp.pdf">LeetCode题解(C++版)</a> ，虽然题目现在看来不算全，但是各种类型都有涉及。</li></ul><hr><h2 id="数据挖掘-Data-Mining"><a href="#数据挖掘-Data-Mining" class="headerlink" title="数据挖掘 Data Mining"></a>数据挖掘 Data Mining</h2><p>这个好像不算是基础课，但是本科基本也都开了这门课。如果说是为了准备考试的话，基本用的教科书都是 <a href="https://link.zhihu.com/?target=https://www-users.cs.umn.edu/~kumar/dmbook/index.php">Introduction to Data Mining</a>，今年也是正好出了第二版。单就考试而言，两版差别不大，基本上考点也挺固定的，做做课后习题就OK。</p><p>如果是对 Data Mining 感兴趣想进一步了解的话，我非常喜欢的一本书是 <a href="https://link.zhihu.com/?target=https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291">Hands-On Machine Learning with Scikit-Learn and TensorFlow</a>，虽然不完全算是 DM 的书，但是写的非常容易理解，各种算法的解释是十分清晰。</p><hr><h2 id="Final-Words"><a href="#Final-Words" class="headerlink" title="Final Words"></a>Final Words</h2><p>当然CS的基础课也远不止这几门，我也只是顺便记录了一下这次考的内容，其余课程也基本都可以在 TYCS 中找到。值得一提的是，每个人学习习惯也不相同，所以对各种资源，特别是公开课类的资源的偏好有可能相差甚远，最重要的还是找到自己看着最开心的资料啦。</p><p>最后的最后，题图来自 <a href="https://link.zhihu.com/?target=https://www.youtube.com/watch?v=SzJ46YA_RaA&t=2s">Map of Computer Science</a> （一个很有趣的小视频）。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近一个月为了准备QE，又回过头把本科的几门课过了一遍。之前在网上好像也没有看到比较集中的课程和相关资源的推荐，所以趁着现在还没有忘记，把这段时间碰到觉得比较好的资源记录下来。&lt;/p&gt;
+&lt;h2 id=&quot;Teach-Yourself-Computer-Science&quot;&gt;&lt;a </summary>
+      
+    
+    
+    
+    
+    <category term="cs" scheme="http://yoursite.com/blog/tags/cs/"/>
+    
+    <category term="tutorials" scheme="http://yoursite.com/blog/tags/tutorials/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我踩过的那些小坑</title>
+    <link href="http://yoursite.com/blog/traps-i-met/"/>
+    <id>http://yoursite.com/blog/traps-i-met/</id>
+    <published>2019-02-10T16:00:00.000Z</published>
+    <updated>2021-03-21T07:17:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>每次接触到新东西的时候总容易踩到各种坑，有些坑小的不行，但是却直接导致最终没法 work，今天决定把这些小坑全部记录下来，以供自己和同样碰到这些问题的人参考，本文会持续更新。</p><h4 id="1-Google-analytics-全部配置完毕，但是在实时概览时仍然没有任何数据"><a href="#1-Google-analytics-全部配置完毕，但是在实时概览时仍然没有任何数据" class="headerlink" title="1. Google analytics 全部配置完毕，但是在实时概览时仍然没有任何数据"></a>1. Google analytics 全部配置完毕，但是在实时概览时仍然没有任何数据</h4><p><strong>Problem</strong>: 这是在配置 <a href="http://www.codeblocq.com/2015/12/Add-Google-Analytics-to-your-hexo-blog/">hexo + google analytics</a> 时碰到的，一般各种主题都已经提供了 “google analytics” 的选项，在申请完一个 ID （类似“UA-101xxxxxx-1”）后直接填到对应主题的配置文件中就好，到此没有任何问题。但是在测试的时候，在 google analytics 的管理界面选择 <em>实时 &gt;&gt; 概览</em> 后却看到活跃用户始终为0。<br><strong>Solution</strong>: 其实不是配置的问题，是因为在本地测试用的 chrome 有阻挡 js 的插件，所以没有看见，暂时关掉就行了。本来以为这是自己碰到的一个特殊问题，但是发现因为很多人的 chrome 都安装了阻挡广告的插件，所以还是很多人碰到类似的问题，可以参考<a href="https://www.zh.advertisercommunity.com/t5/%E5%A0%B1%E8%A1%A8%E8%88%87%E5%88%86%E6%9E%90/google-analytics%E9%A0%81%E9%9D%A2%E4%B8%8A%E9%A1%AF%E7%A4%BA%E4%B8%8D%E5%87%BA%E7%B5%B1%E8%A8%88%E6%95%B8%E6%93%9A/td-p/42485">这里</a>的一个答复。</p><hr><h4 id="2-Spyder-显示-ModuleNotFoundError-No-module-named-xxx"><a href="#2-Spyder-显示-ModuleNotFoundError-No-module-named-xxx" class="headerlink" title="2. Spyder 显示 ModuleNotFoundError: No module named xxx"></a>2. Spyder 显示 ModuleNotFoundError: No module named xxx</h4><p><strong>Problem</strong>: 已经在terminal中进入了 conda 一个特定的 <code>env</code>，然后打开 Spyder，本以为已经在该环境下运行，然后 import 已经安装的某个 lib 却报错显示不存在<br><strong>Solution</strong>: 其实这个时候 Spyder 并不是在该环境下（即使 terminal 中是这样显示的），最简单的方法就是在 anaconda 中切换到那个特定的 <code>env</code>，然后打开即可。</p><hr><h4 id="3-Tensorflow-1-10-1-11-1-12-CUDA-9-2-on-linux"><a href="#3-Tensorflow-1-10-1-11-1-12-CUDA-9-2-on-linux" class="headerlink" title="3. Tensorflow(1.10/1.11/1.12) + CUDA 9.2 on linux"></a>3. Tensorflow(1.10/1.11/1.12) + CUDA 9.2 on linux</h4><p>这个坑比较大，在带有 GPU 的 Linux 操作系统下安装 Tensorflow 时，由于版本问题，所以需要确保 python 版本 + tf 版本 + GPU/CPU + cuda 版本以及 driver 版本都需要协调，所以很容易报错，例如：<br>- <code>ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory</code>: 最简单的解决办法：使用 conda 安装 而不是 pip<br>- <code>CUDA driver version is insufficient for CUDA runtime version</code>: <a href="https://blog.csdn.net/li57681522/article/details/82491617">solution</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;每次接触到新东西的时候总容易踩到各种坑，有些坑小的不行，但是却直接导致最终没法 work，今天决定把这些小坑全部记录下来，以供自己和同样碰到这些问题的人参考，本文会持续更新。&lt;/p&gt;
+&lt;h4 id=&quot;1-Google-analytics-全部配置完毕，但是在实时概览时仍然没</summary>
+      
+    
+    
+    
+    
+    <category term="cs" scheme="http://yoursite.com/blog/tags/cs/"/>
+    
+    <category term="collections" scheme="http://yoursite.com/blog/tags/collections/"/>
+    
+  </entry>
+  
+</feed>
