@@ -39,23 +39,54 @@
   <img class="avatar" src="img/wxzhang-2022.jpeg" alt="wxzhang-photo">
 
   <h1 id="wxzhang">Wenxuan Zhang <span style="font-family:STFangsong">(张雯轩)</span></h1>
-  Senior Algorithm Engineer (算法专家)
+  <br>Senior Algorithm Engineer (算法专家)
   <br>Language Technology Lab
   <br>DAMO Academy, Alibaba Group
   <br><br>
   Contact: <code class="language-plaintext highlighter-rouge">isakzhang [at] gmail.com</code>
+  
   <br>More about me: <a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a> / <a href="https://isakzhang.notion.site/">Blog Posts</a> / <a href="https://www.linkedin.com/in/wenxuan-zhang-608b88153/">LinkedIn</a>
+  <!-- 
   <br>Quick jumps: [<a href="#bio">Short Bio</a>] [<a href="#pub">Publications</a>] [<a href="#awards">Honors</a>] [<a href="#professional">Service</a>] [<a href="#teaching">Teaching&Talk</a>]
-  
-  <hr /> 
-  <h3><a name="bio"></a>Short Bio</h3>
-  Hi, I am currently a research scientist at Language Technology Lab, <a href="https://damo.alibaba.com/?lang=en">Alibaba DAMO Academy</a>. Prior to that, I obtained my Ph.D. degree at <a href="https://www.cuhk.edu.hk/">The Chinese University of Hong Kong</a>, 
-  under the supervision of <a href="http://www1.se.cuhk.edu.hk/~textmine/">Prof. Wai LAM</a>, where I conducted research on NLP and IR, especially focusing on problems in E-commerce domain.
-  
-  <br><br>I have broad interests in natural language processing and machine learning. I focus on low-resource NLP (PLM adaptation, cross-lingual/domain transfer), sentiment analysis, and conversational AI (question answering and dialog systems).
-  Recently, I'm quite interested in large language models, especially on how to make them more accessible in specific application scenarios.
+  -->
 
-  <br><br><span style="color:#f8780f"><i>[NEW]</i></span> Research internship positions (focusing on pure research) in our group are available (base in Singapore or Hangzhou), feel free to drop me your CV if interested.
+  <!--Navigation bar-->
+  <div id="menu">
+    <div>
+      <a href="index.html">Home</a>
+    </div>
+    <div>
+      <a href="research.html">Publications</a>
+    </div>
+    <div>
+      <a href="#teaching">Teaching & Talk</a>
+    </div>
+    <div>
+      <a href="https://isakzhang.notion.site/">Blog</a>
+    </div>
+    <script>
+      $(function () {
+        const current = window.location.pathname.split("/");
+        $('#menu div a').each(function(){
+          const $this = $(this);
+          // if the current path is like this link, make it active
+          if (current.indexOf($this.attr("href")) !== -1) {
+            $this.parent().addClass("now");
+          }
+        })
+      });
+    </script>
+  </div>
+  <!--end of Navigation bar-->
+  
+  <h3><a name="bio"></a>About me</h3>
+  I am currently a research scientist at Language Technology Lab, <a href="https://damo.alibaba.com/?lang=en">Alibaba DAMO Academy</a>. Prior to that, I obtained my Ph.D. degree at <a href="https://www.cuhk.edu.hk/">The Chinese University of Hong Kong</a>, 
+  under the supervision of <a href="http://www1.se.cuhk.edu.hk/~textmine/">Prof. Wai LAM</a>, where I conducted research on natural language processing and information retrieval.
+  
+  <br><br>I have broad interests in NLP and ML. I used to focus on low-resource NLP (PLM adaptation, cross-lingual/domain transfer), sentiment analysis, and conversational AI (question answering and dialog systems).
+  Currently, I mainly work on large language models, especially on <strong>how to make LLMs more accessible in specific application scenarios</strong>.
+
+  <br><br><span style="color:#f8780f"><i>[VALID]</i></span> Research internship positions (focusing on pure research) in our group are available (base in Singapore or Hangzhou), feel free to drop me your CV if interested.
 
   <!--
   <h3><a name="research-interests"></a>Research Interests</h3>
@@ -65,137 +96,25 @@
       <li>Sentiment Analysis (especially fine-grained aspect-level sentiment analysis)</li>
     </ul>
     I'm also interested in <span style="color:#B08519"><a href="https://isakzhang.notion.site/What-is-Transfer-Learning-666035af797a4949b032bbeb0ea46df6">Transfer Learning</a></span> (≈ PLM adaptation for various tasks nowadays).  My research works involve many perspectives of TL: utilization of external supervision signals (WWW20, AACL20), adaptation of pre-trained language models (ACL21, EMNLP21), and cross-lingual transfer (EMNLP21) 
-  
-  <h3 id="news">News</h3>
-    <ul>
-      <li><small> <span style="color:#B08519">[Oct 2020]</span> x </small></li>
-    </ul>
   -->
 
-  <h3><a name="pub"></a>Selected Publications <font size="4.5">[<a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a>]</font></h3> 
+  <h3 id="news">News</h3>
     <ul>
-      <li>
-        <div id="text" style = "color:#1f57b8"><span style="color:#c30"><i>[NEW]</i></span> A Survey on Aspect-Based Sentiment Analysis: Tasks, Methods, and Challenges</div>
-        <strong>Wenxuan Zhang</strong>, Xin Li, Yang Deng, Lidong Bing, Wai Lam
-        <br>IEEE Transactions on Knowledge and Data Engineering, 2022 (<b>TKDE 2022</b>)
-        [<a href="https://arxiv.org/abs/2204.06923">paper</a>] [<a href="https://github.com/IsakZhang/ABSA-Survey">resources</a>] [<a href="https://isakzhang.notion.site/ABSA-c0f507c4704b40b0ad024c39c9ab2dc2">blog</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">A Unified Multi-task Learning Framework for Multi-goal Conversational Recommender Systems</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Weiwen Xu, Wenqiang Lei, Tat-Seng Chua, Wai Lam
-        <br>To appear in <i>ACM Transactions on Information Systems</i>, 2023 (<b>TOIS 2023</b>)
-        [<a href="https://arxiv.org/abs/2203.01054">paper</a>] [<a href="https://github.com/dengyang17/unimind">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">UniGDD: A Unified Generative Framework for Goal-Oriented Document-Grounded Dialogue</div>
-        Chang Gao, <strong>Wenxuan Zhang</strong>, Wai Lam
-        <br><i>In Proceedings of the Association for Computational Linguistics</i>, 2022. (<b>ACL 2022</b>)
-        [<a href="https://aclanthology.org/2022.acl-short.66/">paper</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">User Satisfaction Estimation with Sequential Dialogue Act Modeling in Goal-oriented Conversational Systems</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam, Hong Cheng, Helen Meng
-        <br><i>In The ACM Web Conference</i>, 2022. (<b>WWW 2022</b>)
-        [<a href="https://arxiv.org/abs/2202.02912">paper</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Aspect Sentiment Quad Prediction as Paraphrase Generation</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Xin Li, Yifei Yuan, Lidong Bing, Wai Lam
-        <br><i>In Proceedings of the Conference on Empirical Methods in Natural Language Processing</i>, 2021. (<b>EMNLP 2021</b>)  
-        [<a href="https://aclanthology.org/2021.emnlp-main.726/">paper</a>] [<a href="https://github.com/isakzhang/absa-quad">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Cross-lingual Aspect-based Sentiment Analysis with Aspect Term Code-Switching</div>
-        <strong>Wenxuan Zhang</strong>, Ruidan He, Haiyun Peng, Lidong Bing, Wai Lam
-        <br><i>In Proceedings of the Conference on Empirical Methods in Natural Language Processing</i>, 2021. (<b>EMNLP 2021</b>)  
-        [<a href="https://aclanthology.org/2021.emnlp-main.727/">paper</a>] [<a href="https://github.com/isakzhang/xabsa">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Aspect-based Sentiment Analysis in Question Answering Forums</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Xin Li, Lidong Bing, Wai Lam
-        <br><i>In Findings of the Association for Computational Linguistics: EMNLP 2021</i>. (<b>EMNLP-Findings 2021</b>)  
-        [<a href="https://aclanthology.org/2021.findings-emnlp.390/">paper</a>] [<a href="https://github.com/isakzhang/absa-qa">code</a>]
-      </li>
-      <p> </p>
-      
-      <li>
-        <div id="text" style = "color:#1f57b8">Towards Generative Aspect-Based Sentiment Analysis</div>
-        <strong>Wenxuan Zhang</strong>, Xin Li, Yang Deng, Lidong Bing, Wai Lam.
-        <br><i>In Proceedings of the Association for Computational Linguistics</i>, 2021. (<b>ACL 2021</b>)  
-        [<a href="https://aclanthology.org/2021.acl-short.64.pdf">paper</a>] [<a href="https://github.com/IsakZhang/Generative-ABSA">code</a>]</li>
-      <p> </p>
-    
-      <li>
-        <div id="text" style = "color:#1f57b8">AnswerFact: Fact Checking in Product Question Answering</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Jing Ma, Wai Lam.
-        <br><i>In Proceedings of the Conference on Empirical Methods in Natural Language Processing</i>, 2020. (<b>EMNLP 2020</b>) 
-        [<a href="https://www.aclweb.org/anthology/2020.emnlp-main.188/">paper</a>] [<a href="https://drive.google.com/file/d/1JAmbLlV0b8Fm03VnNeVEXmROvj1po2lN/view?usp=sharing">data</a>] </li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Multi-hop Inference for Question-driven Summarization</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam.
-        <br><i>In Proceedings of the Conference on Empirical Methods in Natural Language Processing</i>, 2020. (<b>EMNLP 2020</b>) 
-        [<a href="https://www.aclweb.org/anthology/2020.emnlp-main.547/">paper</a>]
-        [<a href="https://github.com/dengyang17/msg">code</a>]</li>
-      <p> </p>
-    
-      <li>
-        <div id="text" style = "color:#1f57b8">Answering Product-related Questions with Heterogeneous Information</div>
-        <strong>Wenxuan Zhang</strong>, Qian Yu, Wai Lam.
-        <br><i>In Proceedings of the 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics</i>, 2020. (<b>AACL 2020</b>)  
-        [<a href="https://www.aclweb.org/anthology/2020.aacl-main.70/">paper</a>]</li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Opinion-aware Answer Generation for Review-driven Question Answering in E-Commerce</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam.
-        <br><i>In The 29th ACM International Conference on Information and Knowledge Management</i>, 2020. (<b>CIKM 2020</b>) 
-      </li>
-      <p> </p>
-    
-      <li>
-        <div id="text" style = "color:#1f57b8">Answer Ranking for Product-Related Questions via Multiple Semantic Relations Modeling</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Wai Lam.
-        <br><i>In the 43rd International ACM SIGIR Conference on Research & Development in Information Retrieval</i>, 2020. (<b>SIGIR 2020</b>) 
-        [<a href="https://arxiv.org/abs/2006.15599">arXiv</a>] </li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Review-guided Helpful Answer Identification in E-commerce</div>
-        <strong>Wenxuan Zhang</strong>, Wai Lam, Yang Deng, Jing Ma.
-        <br><i>In Proceedings of the World Wide Web Conference</i>, 2020. (<b>WWW 2020</b>) 
-        [<a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380015">paper</a>]
-        [<a href="https://github.com/isakzhang/answer-helpfulness-prediction">code</a>]</li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Exploiting BERT for End-to-End Aspect-Based Sentiment Analysis</div>
-        Xin Li, Lidong Bing, <b>Wenxuan Zhang</b> and Wai Lam.
-        <br><i>In Proceedings of the 5th Workshop on Noisy User-generated Text</i>, 2019. <b>(W-NUT@EMNLP 2019)</b>
-        [<a href="https://www.aclweb.org/anthology/D19-5505.pdf">paper</a>]
-        [<a href="https://github.com/lixin4ever/BERT-E2E-ABSA">code</a>]</li>
-      <!-- [<a href="https://arxiv.org/pdf/1910.00883.pdf">arxiv</a>] -->
+      <li><span style="color:#B08519">[June 2020]</span> We release <strong>M3Exam</strong>, a novel benchmark sourced from real and official human exam questions for evaluating LLMs in a multilingual, multimodal, and multilevel context. <a href="https://arxiv.org/pdf/2306.05179.pdf">Paper</a> and <a href="https://github.com/DAMO-NLP-SG/M3Exam">data</a> are all public available now.</li>
+      <li><span style="color:#B08519">[May 2020]</span> We conducted a reality check on current large language models for various sentiment analysis tasks, the <a href="https://arxiv.org/abs/2305.15005">paper</a> is available on arXiv now.</li>
+      <li><span style="color:#B08519">[Apr 2020]</span> Our tutorial "Sentiment Analysis and Beyond in the Era of Enlarged Language Models" was accepted to IJCAI-2023. Check it <a href="https://isakzhang.github.io/talks/ijcai23-sentiment-tutorial.html">here</a>!</li>
     </ul>
+  
 
-<h3><a name="awards"></a>Honors & Awards</h3>
+  <h3><a name="awards"></a>Honors & Awards</h3>
   <ul>
+    <li> Alibaba Star, Alibaba Group, 2022</li>
     <li> ACM SIGIR Student Travel Grant for SIGIR 2020 </li>
     <li> National Scholarship in 2016-2017, Ministry of Education of China, 2017 </li>
     <li> National Scholarship in 2015-2016, Ministry of Education of China, 2016 </li>
     <li> National Cyber Security Scholarship (<i>Only <span style="color:#B08519">100</span> undergraduates in China are rewarded every year</i>), 2017</li>
+    <li> Outstanding Graduate of Sichuan University, SCU, 2017</li>
+    <li> Outstanding Student of Sichuan University, SCU, 2016 </li>
     <!--
     <li> Third Prize in National College Student Information Security Contest, 2017</li>
     <li> Outstanding Graduate of Sichuan University, SCU, 2017</li>
@@ -204,12 +123,13 @@
     -->
   </ul>
 
-<h3><a name="professional"></a>Professional Service</h3>
+  <h3><a name="professional"></a>Professional Service</h3>
   <ul>
     <li> Regular PC Member (or Reviewer): 
       <ul>
-        <li>ACL, EMNLP, ACL Rolling Review, COLING</li>
-        <li>SIGKDD, WWW, WSDM, AAAI</li>
+        <li>ACL, EMNLP, ACL Rolling Review, COLING, NLPCC</li>
+        <li>SIGKDD, WWW, WSDM</li>
+        <li>NeurIPS, AAAI</li>
       </ul>
     <li> Journal Reviewer:
       <ul>
@@ -221,7 +141,7 @@
     </li>
   </ul>
 
-<h3><a name="teaching"></a>Teaching & Talk</h3>
+  <h3><a name="teaching"></a>Teaching & Talk</h3>
   <ul>
     <li> Mar 2023, I gave a talk "A Survey on Aspect-Based Sentiment Analysis" at <a href="https://s3a.sentic.net/">Singapore Symposium
       on Sentiment Analysis (S3A)</a></li>
@@ -234,8 +154,7 @@
 
 
 <div id='footer'>
-  <p style="text-align:right;">Last modified date: Feb 2023
-  </br>Website design modified from <a href="https://nlp.stanford.edu/~johnhew/">here</a></p>
+  <p style="text-align:right;">Last modified date: June 2023</p>
 </div>
 
 </body>
