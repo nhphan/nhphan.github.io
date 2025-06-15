@@ -1,3 +1,8 @@
+ul {
+  margin-left: 0;
+  padding-left: 1.2em;
+  list-style-position: outside;
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
