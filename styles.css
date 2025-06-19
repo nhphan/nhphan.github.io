@@ -1,3 +1,29 @@
+ul li img.flag-icon {
+  display: inline-block;
+  height: 1em;             /* cao bằng 1 dòng chữ */
+  width: auto;             /* giữ tỉ lệ */
+  vertical-align: middle;  /* căn giữa so với text */
+  margin: 0 0.3em;         /* khoảng cách trước/sau ảnh */
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem;    
+}
+
+.image-row img {
+  max-width: 48%;      
+  height: auto;
+  object-fit: cover;   
+  border-radius: 8px;  
+}
+.hobby-img {
+  display: block;     
+  margin: 0em auto;   
+  max-width: 100%;       
+  border-radius: 8px;   
+}
+
 
 ul {
   margin-left: 0;
