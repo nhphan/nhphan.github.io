@@ -62,29 +62,25 @@ The design of this website is based on https://nlp.stanford.edu/~johnhew/ and We
   -->
 
   <!--Navigation bar-->
-  <div id="menu">
-    <div>
-      <a href="index.html">About</a>
-    </div>
-    <div>
-      <a href="research.html">Publications</a>
-    </div>
-    <div>
-      <a href="fun.html">Fun</a>
-    </div>
-    <script>
-      $(function () {
-        const current = window.location.pathname.split("/");
-        $('#menu div a').each(function(){
-          const $this = $(this);
-          // if the current path is like this link, make it active
-          if (current.indexOf($this.attr("href")) !== -1) {
-            $this.parent().addClass("now");
-          }
-        })
-      });
-    </script>
+<nav id="menu">
+  <div class="container">
+    <div><a href="index.html">About</a></div>
+    <div><a href="research.html">Publications</a></div>
+    <div><a href="fun.html" class="current">Fun</a></div>
   </div>
+  <script>
+    $(function () {
+      const current = window.location.pathname.split("/");
+      $('#menu div a').each(function(){
+        const $this = $(this);
+        // if the current path is like this link, make it active
+        if (current.indexOf($this.attr("href")) !== -1) {
+          $this.parent().addClass("now");
+        }
+      })
+    });
+  </script>
+  </nav>
   <!--end of Navigation bar-->
 
 

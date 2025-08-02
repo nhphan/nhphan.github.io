@@ -246,23 +246,51 @@ blockquote p:last-child {
     margin: 10px auto;
 }
 
-
 #menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #e8dfd7;
-    border-bottom: 1px solid #ddd;
-    z-index: 1000;
-    display: flex;
-    /* justify-content: center; */
-    justify-content: flex-start;
-    padding: 0 0 0 450px;
-    align-items: center;
-    height: 45px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    gap: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e8dfd7;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  z-index: 1000;
+}
+
+/* phần chứa link giới hạn độ rộng, thẳng hàng với nội dung .container */
+#menu .container {
+  max-width: 848px;       /* khớp với .container mặc định */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;      /* khớp padding nội dung */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 45px;
+}
+
+/* style cho mỗi mục con */
+#menu .container > div {
+  flex: none;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+}
+#menu .container a {
+  display: block;
+  padding: 3px 0;
+  color: inherit;
+  text-decoration: none;
+}
+#menu .container > div:hover a {
+  color: red;  /* hoặc màu tùy ý */
+}
+#menu .container a:focus {
+  outline: none;
+}
+
+#menu .container a.current {
+  color: red;
 }
   
 #menu div {
@@ -275,9 +303,9 @@ blockquote p:last-child {
     color: #333;
 }
   
-#menu div:hover {
+/* #menu div:hover {
     background: #ddd;
-}
+} */
   
 #menu .now {
     /* background: #eee; */
@@ -293,6 +321,15 @@ blockquote p:last-child {
   
 #menu a:hover {
     text-decoration: none;
+}
+
+h3 {
+  /* giữ nguyên font-style hiện tại */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* thêm gạch ngang */
+  border-bottom: 3px solid #eee;
+  padding-bottom: .5rem;
 }
 
 .message {
