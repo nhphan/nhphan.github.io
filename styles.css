@@ -620,6 +620,14 @@ code {
     border-radius: 3px
 }
 
+code.language-plaintext.highlighter-rouge {
+  background-color: #ececec;
+  color: #8B658B;
+  font-weight: bold;
+  padding: 0.35em 0.6em;
+  font-size: 90%;
+}
+
 pre {
     margin-top: 0;
     margin-bottom: 1rem
