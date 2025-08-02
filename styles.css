@@ -1,11 +1,11 @@
 .spacer { display:block; height:0.8em; }
 
-ul li img.flag-icon {
+ul li img.icon {
   display: inline-block;
-  height: 1em;             /* cao bằng 1 dòng chữ */
-  width: auto;             /* giữ tỉ lệ */
-  vertical-align: middle;  /* căn giữa so với text */
-  margin: 0 0.3em;         /* khoảng cách trước/sau ảnh */
+  height: 1em;             
+  width: auto;
+  vertical-align: middle;
+  margin: 0 0.3em;
 }
 
 .image-row {
@@ -1001,6 +1001,10 @@ header {
     margin-right: auto
 }
 
+.blog .container.content {
+  margin-top: 3rem;  /* giảm từ 5rem xuống 3rem */
+}
+
 @media (max-width: 600px) {
     .container {
         max-width: 100%;
@@ -1378,6 +1382,46 @@ footer {
     vertical-align: middle;
     margin-left: .25rem;
     padding: .25rem
+}
+
+
+/*-------------------------------------------
+  Layout chính: main + sidebar
+-------------------------------------------*/
+.fun-page .layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .fun-page .layout { grid-template-columns: 1fr; }
+}
+
+/*-------------------------------------------
+  Card của mỗi bài viết
+-------------------------------------------*/
+.blog .post-card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.blog .post-meta {
+  font-size: .85rem;
+  color: #666;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: .5rem;
+}
+.blog .post-title {
+  font-size: 1.25rem;
+  margin: .75rem 1rem;
+}
+.blog .post-excerpt {
+  padding: 0 1rem 1rem;
+  color: #333;
 }
 
 /*# sourceMappingURL=styles.css.map */

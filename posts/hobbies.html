@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+The design of this website is based on https://nlp.stanford.edu/~johnhew/ and Wenxuan Zhang (isakzhang AT gmail).
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Phan's Homepage </title>
+  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <meta name="author" content="Phan Nguyen">
+  <meta name="keywords" content="Phan Nguyen, Nguyễn Hòa Phan, Phan Nguyen KAIST, Nguyen Hoa Phan">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Homepage of Phan">
+  <link rel="stylesheet" href="..\styles.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134238626-1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-134238626-1');
+  </script>
+
+  <!-- <style>
+    .hidden-content {
+        display: none;
+    }
+  </style> -->
+</head>
+
+<body class="blog">
+  <main>
+  <div class="container content"> 
+
+  <!--Navigation bar-->
+<nav id="menu">
+  <div class="container">
+    <div><a href="..\index.html">About</a></div>
+    <div><a href="..\research.html">Publications</a></div>
+    <div><a href="..\blog.html" class="current">Blog</a></div>
+  </div>
+  <script>
+    $(function () {
+      const current = window.location.pathname.split("/");
+      $('#menu div a').each(function(){
+        const $this = $(this);
+        // if the current path is like this link, make it active
+        if (current.indexOf($this.attr("href")) !== -1) {
+          $this.parent().addClass("now");
+        }
+      })
+    });
+  </script>
+  </nav>
+  <!--end of Navigation bar -->
+
+
+<!-- Hobbies -->
+  <h1>My hobbies</h1>
+
+  <h2>Competitive programming</h2>
+  I enjoy competitive programming in my free time. You can also reach me on <a href="https://codeforces.com/profile/cunhenry01" target="_blank">Codeforces</a>.
+
+  <span class="spacer"></span>
+  <h2>K-drama addict</h2>
+  I watch about one K-drama film per month, mostly romances (<a href="https://www.youtube.com/watch?v=gxJy-Q8xUEE" target="_blank">Our Beloved Summer</a> is the GOAT for me). My favorite actresses are Park Boyoung, Kim Jiwon and Kim Dami.
+
+  <span class="spacer"></span>
+  <h2>Sports</h2>
+  I try to run at least 20 minutes every day to build my endurance. Sometimes I play table tennis or football with friends.
+  <div class="image-row">
+    <img src="..\img\pingpong.jpg" alt="Photo 1">
+    <img src="..\img\football.jpg" alt="Photo 2">
+  </div>
+
+  <span class="spacer"></span>
+  <h2>Travelling</h2>
+  Below are the countries I have visited so far, and I hope this list will continue to grow.
+  <!-- https://www.flaticon.com/search -->
+  <ul>
+    <li>
+      Vietnam<img src="../flag/vietnam.png" alt="🇻🇳" class="icon">: 
+      My hometown
+    </li>
+    <li>
+      South Korea<img src="../flag/korea.png" alt="kr" class="icon">: 
+      Daejeon (B.S. KAIST), Seoul, Busan
+    </li>
+    <li>
+      Singapore<img src="../flag/singapore.png" alt="🇸🇬" class="icon">: 
+      ICPC 2025, SIMOC 2024 (guest)
+    </li>
+    <li>
+      Taiwan<img src="../flag/taiwan.png" alt="tw" class="icon">: 
+      Taipei (TMU Internship), Taichung (ICPC 2024)
+    </li>
+    <li>
+      China<img src="../flag/china.png" alt="cn" class="icon">: 
+      Shanghai (SJTU Internship), Wuhan
+    </li>
+    <li>
+      Malaysia<img src="../flag/malay.png" alt="ml" class="icon">: 
+      Kuala Lumpur (AJAFA 2022)
+    </li>
+
+  </ul>
+
+  <br><br><br><br>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+The design of this website is based on https://nlp.stanford.edu/~johnhew/ and Wenxuan Zhang (isakzhang AT gmail).
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Phan's Homepage </title>
+  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <meta name="author" content="Phan Nguyen">
+  <meta name="keywords" content="Phan Nguyen, Nguyễn Hòa Phan, Phan Nguyen KAIST, Nguyen Hoa Phan">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Homepage of Phan">
+  <link rel="stylesheet" href="./styles.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134238626-1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-134238626-1');
+  </script>
+
+  <!-- <style>
+    .hidden-content {
+        display: none;
+    }
+  </style> -->
+</head>
+
+<body class="blog">
+  <main>
+  <div class="container content"> 
+  
+  <!-- <div class="home">
+
+  <div class="mini-intro">
+  <img class="avatar" src="img\Phan_sgp.jpg" alt="phan-photo">
+
+  <h1 id="nhphan">Phan Nguyen <span style="font-family:STFangsong">(Nguyễn Hòa Phan)</span></h1>
+  
+  <code class="language-plaintext highlighter-rouge">nhphan [at] kaist.ac.kr</code>
+  <br>
+  <br>Undergraduate Student
+  <br>School of Computing
+  <br>Department of Industrial & Systems Engineering
+  <br>Korea Advanced Institute of Science and Technology (KAIST)
+  
+  
+  <br><br><a href="https://www.linkedin.com/in/phannguyen2809/" target="_blank">LinkedIn</a> | <a href="https://www.facebook.com/phan.nguyen.2809/" target="_blank">Facebook</a> -->
+
+  <!-- <br><br> -->
+  <!-- 
+  <br>Quick jumps: [<a href="#bio">Short Bio</a>] [<a href="#pub">Publications</a>] [<a href="#awards">Honors</a>] [<a href="#professional">Service</a>] [<a href="#teaching">Teaching&Talk</a>]
+  -->
+
+  <!--Navigation bar-->
+<nav id="menu">
+  <div class="container">
+    <div><a href="index.html">About</a></div>
+    <div><a href="research.html">Publications</a></div>
+    <div><a href="blog.html" class="current">Blog</a></div>
+  </div>
+  <script>
+    $(function () {
+      const current = window.location.pathname.split("/");
+      $('#menu div a').each(function(){
+        const $this = $(this);
+        // if the current path is like this link, make it active
+        if (current.indexOf($this.attr("href")) !== -1) {
+          $this.parent().addClass("now");
+        }
+      })
+    });
+  </script>
+  </nav>
+  <!--end of Navigation bar-->
+
+  <div class="layout">
+    <!-- LIST OF POSTS -->
+    <main class="blog-list">
+      <article class="post-card">
+        <header class="post-meta">
+          <span class="date">Last updated on Aug 3, 2025 | <strong>Competition</strong></span>
+        </header>
+        <h2 class="post-title">Competitive programming</h2>
+        <p class="post-excerpt">I enjoy competitive programming in my free time…</p>
+      </article>
+      <!-- thêm các <article> tương tự cho mỗi mục -->
+      <article class="post-card">
+        <header class="post-meta">
+          <span class="date">Last updated on Aug 3, 2025 | <strong>Misc</strong></span>
+        </header>
+        <h2 class="post-title"><div><a href="posts/hobbies.html">My hobbies</a></div></h2>
+        <p class="post-excerpt">Things I do outside study.</p>
+    </main>
+    <!-- SIDEBAR -->
+  </div>
+
+
+<!-- Hobbies -->
+  <!-- <h2>Hobbies</h2>
+  I enjoy competitive programming in my free time. You can also reach me on <a href="https://codeforces.com/profile/cunhenry01" target="_blank">Codeforces</a>.
+
+  <br><br>I watch about one K-drama film per month, mostly romances (<a href="https://www.youtube.com/watch?v=gxJy-Q8xUEE" target="_blank">Our Beloved Summer</a> is the GOAT for me). My favorite actresses are Park Boyoung, Kim Jiwon and Kim Dami.
+
+  <br><br>I try to run at least 20 minutes every day to build my endurance. Sometimes I play table tennis or football with friends.
+  <div class="image-row">
+    <img src="img/pingpong.jpg" alt="Photo 1">
+    <img src="img/football.jpg" alt="Photo 2">
+  </div> -->
+
+  <!-- <br>Below are the countries I have visited so far, and I hope this list will continue to grow. -->
+  <!-- https://www.flaticon.com/search -->
+  <!-- <ul>
+    <li>
+      Vietnam<img src="flag/vietnam.png" alt="🇻🇳" class="icon">: 
+      My hometown.
+    </li>
+    <li>
+      South Korea<img src="flag/korea.png" alt="kr" class="icon">: 
+      Daejeon (B.S. KAIST), Seoul, Busan
+    </li>
+    <li>
+      Singapore<img src="flag/singapore.png" alt="🇸🇬" class="icon">: 
+      ICPC 2025, SIMOC 2024 (guest)
+    </li>
+    <li>
+      Taiwan<img src="flag/taiwan.png" alt="tw" class="icon">: 
+      Taipei (TMU Internship), Taichung (ICPC 2024)
+    </li>
+    <li>
+      China<img src="flag/china.png" alt="cn" class="icon">: 
+      Shanghai (SJTU Internship), Wuhan
+    </li>
+    <li>
+      Malaysia<img src="flag/malay.png" alt="ml" class="icon">: 
+      Kuala Lumpur (AJAFA 2022)
+    </li>
+
+  </ul>
+
+  <h2>Resources</h2>
+  Here are some materials that I have/collect. Feel free to use them.
+  <h3>Courses at KAIST</h3>
+  <ul>
+    <li>
+      <a href="https://mhsung.github.io/kaist-cs492d-fall-2024/" target="_blank">CS492(D) Diffusion Models and Their Applications</a>
+    </li>
+    <li>
+      <a href="https://dabeenl.github.io/IE331_2023" target="_blank">IE331 Operations Research: Optimization</a>
+    </li>
+  </ul>
+  <h3>GRE</h3>
+  Abc xyz -->
+
+
+<!-- <br><br> -->
+<!-- <h3>Hey</h3> -->
+
+</div>
+
+<br><br><br>
+<!-- <div id='footer'>
+  <p style="text-align:center;">Last updated: July 2025</p>
+</div> -->
+
+</body>
+
+</html>
