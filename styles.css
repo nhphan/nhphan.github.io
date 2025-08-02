@@ -1424,4 +1424,10 @@ footer {
   color: #333;
 }
 
+.blog .post-thumb img {
+    width: 100%;
+    display: block;
+    padding: 0.2rem 1rem 0 1rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
