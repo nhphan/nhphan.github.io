@@ -961,6 +961,29 @@ header {
     margin-right: auto
 }
 
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-top: 5rem;
+    }
+    /* html {
+        font-size: 15px;
+    }
+    #menu {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 0;
+    }
+    #menu div {
+        width: 100%;
+        display: block;
+        margin: 0;
+        text-align: center;
+    } */
+}
+
 footer {
     margin-bottom: 1rem
 }
