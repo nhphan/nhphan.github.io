@@ -42,7 +42,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 html {
@@ -950,7 +950,8 @@ header {
 }
 
 .container {
-    width: 848px;
+    max-width: 848px;
+    width: 100%;
     /* min-width: 53rem; */
     /* max-width: 53rem; */
     padding-left: 1.5rem;
