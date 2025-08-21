@@ -1,5 +1,34 @@
 .spacer { display:block; height:0.8em; }
 
+
+.img-grid {
+  display: grid;
+  gap: 10px;          /* khoảng cách giữa ảnh */
+  margin: 1rem 0;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-1 {
+  grid-template-columns: 1fr;
+}
+
+.img-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;  /* bo nhẹ góc cho đẹp */
+}
+
 ul li img.icon {
   display: inline-block;
   height: 1em;             

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+The design of this website is based on https://nlp.stanford.edu/~johnhew/ and Wenxuan Zhang (isakzhang AT gmail).
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Phan | Blog </title>
+  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <meta name="author" content="Phan Nguyen">
+  <meta name="keywords" content="Phan Nguyen, Nguyễn Hòa Phan, Phan Nguyen KAIST, Nguyen Hoa Phan">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Homepage of Phan">
+  <link rel="stylesheet" href="..\styles.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134238626-1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-134238626-1');
+  </script>
+
+  <!-- <style>
+    .hidden-content {
+        display: none;
+    }
+  </style> -->
+</head>
+
+<body class="blog">
+  <main>
+  <div class="container content"> 
+
+  <!--Navigation bar-->
+<nav id="menu">
+  <div class="container">
+    <div><a href="..\index.html">About</a></div>
+    <div><a href="..\research.html">Publications</a></div>
+    <div><a href="..\blog.html" class="current">Blog</a></div>
+  </div>
+  <script>
+    $(function () {
+      const current = window.location.pathname.split("/");
+      $('#menu div a').each(function(){
+        const $this = $(this);
+        // if the current path is like this link, make it active
+        if (current.indexOf($this.attr("href")) !== -1) {
+          $this.parent().addClass("now");
+        }
+      })
+    });
+  </script>
+  </nav>
+  <!--end of Navigation bar -->
+
+
+<!-- Hobbies -->
+  <h1>ICPC Season 2024-2025 Throwback</h1>
+
+  <h2>Overview</h2>
+  The International Collegiate Programming Contest (ICPC) is the world's oldest, largest, and most prestigious programming competition for university students.
+  To qualify for the World Final, teams (in Asia Pacific region) must go through university-level round, national round, regional round, and Asia Pacific Championship.
+  Our team reached the Asia Pacific Championship. Although we didn’t make it to the World Final, the journey was full of unforgettable memories and experiences.
+
+  <!-- <span class="spacer"></span> -->
+  <h2>Teammates</h2>
+  Our team was <strong>slowforce</strong>, composing of <a href="https://stats.ioinformatics.org/people/7811" target="_blank">Aidar Munduzbaev</a>, <a href="https://codeforces.com/profile/khuepr123" target="_blank">Hoang Ngoc Bao Khue</a>, and me.
+  I was fortunate to have such strong teammates. Aidar is the legend of his country, with the first ever silver medal at IOI for Kyrgyzstan.
+  Khue is the World Finalist of ICPC 2024, with the max rating of 2680 on Codeforces.
+  <span class="spacer"></span>
+  <img src="..\img\posts\icpc\t13.jpg">
+  <p style="text-align: center;">Our team in Taiwan Regional. From left to right are Khue, me, and Aidar.</p>
+
+
+  <h2>Results</h2>
+  Our team got <strong>Gold Medal</strong> in ICPC Taichung Regional, and qualified for the ICPC Asia Pacific Championship (ICPC APAC).
+  In ICPC APAC, Khue couldn't attend due to personal reasons, so we competed with only 2 members.
+  We got <strong>31st Place</strong> in the Championship, which is a great result for us.
+
+  <!-- <div class="image-row">
+    <img src="..\img\posts\hobbies\pingpong.jpg" alt="Photo 1">
+    <img src="..\img\posts\hobbies\football.jpg" alt="Photo 2">
+  </div> -->
+
+  <!-- <span class="spacer"></span> -->
+  <h2>Pictures</h2>
+  I uploaded some pictures from the contests. They are all good memories.
+
+  <br><span class="spacer"></span>
+  <strong>ICPC Asia Pacific Championship, Singapore.</strong>
+  <!-- <span class="spacer"></span> -->
+
+    <div class="img-grid grid-2">
+        <img src="..\img\posts\icpc\a7.jpg">
+        <img src="..\img\posts\icpc\a8.jpg">
+    </div>
+
+    <div class="img-grid grid-3">
+        <img src="..\img\posts\icpc\a1.jpg">
+        <img src="..\img\posts\icpc\a5.jpg">
+        <img src="..\img\posts\icpc\a3.jpg">
+    </div>
+
+    <!-- <div class="img-grid grid-3">
+        <img src="..\img\posts\icpc\a4.jpg">
+        <img src="..\img\posts\icpc\a11.jpg">
+        <img src="..\img\posts\icpc\a12.jpg">
+    </div> -->
+
+  <strong>ICPC Asia Taichung Regional, Taiwan.</strong>
+  <!-- <span class="spacer"></span> -->
+
+    <div class="img-grid grid-2">
+        <img src="..\img\posts\icpc\t4.jpg">
+        <img src="..\img\posts\icpc\t14.jpg">
+    </div>
+
+    <div class="img-grid grid-2">
+        <img src="..\img\posts\icpc\t17.jpg">
+        <img src="..\img\posts\icpc\t5.jpg">
+    </div>
+
+    <div class="img-grid grid-3">
+        <img src="..\img\posts\icpc\t1.jpg">
+        <img src="..\img\posts\icpc\t7.jpg">
+        <img src="..\img\posts\icpc\t10.jpg">
+    </div>
+
+  <strong>ICPC Asia Seoul Regional, South Korea.</strong>
+  <!-- <span class="spacer"></span> -->
+
+    <div class="img-grid grid-2">
+        <img src="..\img\posts\icpc\s6.jpg">
+        <img src="..\img\posts\icpc\s7.jpg">
+    </div>
+
+    <div class="img-grid grid-3">
+        <img src="..\img\posts\icpc\s5.jpg">
+        <img src="..\img\posts\icpc\s2.jpg">
+        <img src="..\img\posts\icpc\s4.jpg">
+    </div>
+
+  <strong>ICPC Korea National Contest, KAIST.</strong>
+  <!-- <span class="spacer"></span> -->
+
+    <div class="img-grid grid-2">
+        <img src="..\img\posts\icpc\k1.jpg">
+        <img src="..\img\posts\icpc\k2.jpg">
+    </div>
+
+  <strong>Others.</strong>
+  <span class="spacer"></span>
+
+    <img src="..\img\posts\icpc\o1.jpg">
+    <p style="text-align: center;">Gifts from Kazakhstan. My best gift ever. Thanks, Khue :D</p>
+
+
+  <br><br><br>
+
+</div>
+
+</body>
+
+</html>
