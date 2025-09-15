@@ -283,7 +283,8 @@ blockquote p:last-child {
   top: 0;
   left: 0;
   width: 100%;
-  background: #e8dfd7;
+  /* background: #e8dfd7; */
+  background: #E5E7EB;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   z-index: 1000;
